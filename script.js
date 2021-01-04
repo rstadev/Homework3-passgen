@@ -2,11 +2,22 @@
 var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
-  var characters = prompt("How many characters would you like in your password?")
+  // var characters = prompt("How many characters would you like in your password?")
+  // if (characters < 8 || characters != typeof(8)) {
+  //   alert("Password cannot be less than 8 characters.")
+  // }
+  while (true) {
+    var characters = prompt("How many characters would you like in your password?")
+    if (characters >= 8) {
+      break
+    }
+    alert("You've entered an invalid answer. Please try again")
+  }
   var specialChar = confirm("Would you like to include special characters like !, #, %, *, etc?")
   var numbers = confirm("Would you like to include numbers in your password?")
   var upperOrLower = prompt("Would you like to include uppercase letters? Choose u, for only upper, l for only lower, or b for both.")
 
+  
 
   console.log("characters: ", characters)
   console.log("special characters: ", specialChar)

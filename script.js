@@ -7,7 +7,7 @@ function generatePassword() {
   //   alert("Password cannot be less than 8 characters.")
   // }
   while (true) {
-    var characters = prompt("How many characters would you like in your password?");
+    var characters = prompt("How many characters would you like in your password? Minimum of 8 characters are required.");
     if (characters >= 8) {
       break
     }
@@ -17,9 +17,13 @@ function generatePassword() {
   var numbers = confirm("Would you like to include numbers in your password?");
   var upperOrLower = prompt("Would you like to include uppercase letters? Choose u, for only upper, l for only lower, or b for both.");
   var passwordEmpty = "";
-  var charSet = "abcdefghijklmnopqrstuvwxyz";
+  var charSet = ["abcdefghijklmnopqrstuvwxyz",
+  "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+  "!@#$%^&*()_+-=/`~",
+]
+
   for (var i = 0; i < characters; i++) {
-    passwordEmpty += charSet.charAt(Math.floor(Math.random() * charSet.length))
+    passwordEmpty += charSet[1, 2, 3].charAt(Math.floor(Math.random() * charSet.length))
   }
    
   console.log("password: ", passwordEmpty)

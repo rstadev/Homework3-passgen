@@ -7,10 +7,6 @@ var charSetSpecialChar = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_",
 var charNumbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
 
 function generatePassword() {
-  // var characters = prompt("How many characters would you like in your password?")
-  // if (characters < 8 || characters != typeof(8)) {
-  //   alert("Password cannot be less than 8 characters.")
-  // }
   while (true) {
     var characters = prompt("How many characters would you like in your password? Minimum of 8 characters are required.");
     if (characters >= 8) {
@@ -23,17 +19,11 @@ function generatePassword() {
   var confirmedUpper = confirm("Would you like to include uppercase letters?");
   var confirmedLower = confirm("Would you like to include lowercase letters?");
   
-  // if (numbers == false && upperOrLower == "l" && specialChar == false) {
+  if
+
   for (var i = 0; i < characters; i++) {
     passwordGen = charChoices.charAt(Math.floor( Math.random() * charSet.length))
     }
-  // } else if (numbers && upperOrLower == "l" && specialChar == false) {
-  //   for (var i = 0; i < characters; i++) {
-  //     passwordEmpty += charSet[0].charAt(Math.floor( Math.random() * charSet.length))
-  
-  //   }
-  // }
-  // // 
    
   console.log("password: ", passwordEmpty)
   console.log("characters: ", characters)

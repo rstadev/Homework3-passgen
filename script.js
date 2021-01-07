@@ -15,22 +15,32 @@ function generatePassword() {
   }
   var specialChar = confirm("Would you like to include special characters like !, #, %, *, etc?")
   var numbers = confirm("Would you like to include numbers in your password?");
-  var upperOrLower = prompt("Would you like to include uppercase letters? Choose u, for only upper, l for only lower, or b for both.");
+  var confirmedUpper = confirm("Would you like to include uppercase letters?");
+  var confirmedLower = confirm("Would you like to include lowercase letters?");
+  
   var passwordEmpty = "";
-  var charSet = ["abcdefghijklmnopqrstuvwxyz",
-  "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-  "!@#$%^&*()_+-=/`~",
-]
-
+  var charSet = "abcdefghijklmnopqrstuvwxyz"
+  // "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+  // "!@#$%^&*()_+-=/`~",
+  // "1234567890",
+  // if (numbers == false && upperOrLower == "l" && specialChar == false) {
   for (var i = 0; i < characters; i++) {
-    passwordEmpty += charSet[1, 2, 3].charAt(Math.floor(Math.random() * charSet.length))
-  }
+    passwordEmpty += charSet.charAt(Math.floor( Math.random() * charSet.length))
+    }
+  // } else if (numbers && upperOrLower == "l" && specialChar == false) {
+  //   for (var i = 0; i < characters; i++) {
+  //     passwordEmpty += charSet[0].charAt(Math.floor( Math.random() * charSet.length))
+  
+  //   }
+  // }
+  // // 
    
   console.log("password: ", passwordEmpty)
   console.log("characters: ", characters)
   console.log("special characters: ", specialChar)
   console.log("numbers chosen: ", numbers)
-  console.log("upperOrLower response: ", upperOrLower)
+  console.log("confirmedUpper response: ", confirmedUpper)
+  console.log("confirmedLower response: ", confirmedLower)
   return passwordEmpty
 }
 

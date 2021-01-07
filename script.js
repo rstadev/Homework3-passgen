@@ -1,5 +1,10 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+var passwordEmpty = [];
+var charSetLowerLetters =  ["a", "b", "c", "d", "e", "f", "g", "h", "i","j","k","l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var charSetUpperLetters=[ "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",]
+var charSetSpecialChar = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "-", "=", "/", "`", "~"]
+var charNumbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
 
 function generatePassword() {
   // var characters = prompt("How many characters would you like in your password?")
@@ -18,11 +23,6 @@ function generatePassword() {
   var confirmedUpper = confirm("Would you like to include uppercase letters?");
   var confirmedLower = confirm("Would you like to include lowercase letters?");
   
-  var passwordEmpty = [];
-  var charSetLowerLetters =  ["a", "b", "c", "d", "e", "f", "g", "h", "i","j","k","l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-  var charSetUpperLetters=[ "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",]
-  var charSetSpecialChar = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "-", "=", "/", "`", "~"]
-  var charNumbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
   // if (numbers == false && upperOrLower == "l" && specialChar == false) {
   for (var i = 0; i < characters; i++) {
     passwordGen = charChoices.charAt(Math.floor( Math.random() * charSet.length))

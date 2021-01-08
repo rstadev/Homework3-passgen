@@ -9,7 +9,7 @@ var charNumbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 function generatePassword() {
   while (true) {
     var characters = prompt("How many characters would you like in your password? Minimum of 8 characters are required.");
-    if (characters >= 8) {
+    if (characters >= 8 && characters <= 128) {
       break
     }
     alert("You've entered an invalid answer. Please try again")
@@ -22,6 +22,53 @@ function generatePassword() {
   if (confirmedUpper && confirmedLower && numbers && specialChar) {
     charChoices = charSetLowerLetters.concat(charSetUpperLetters, charSetSpecialChar, charNumbers);
   }
+  else if (confirmedUpper && confirmedLower && numbers) {
+    charChoices = charSetLowerLetters.concat(charSetUpperLetters, charNumbers)
+  }
+  else if (confirmedUpper && confirmedLower && specialChar) {
+    charChoices = charSetLowerLetters.concat(charSetUpperLetters, charSetSpecialChar)
+  }
+  else if (confirmedUpper && numbers && speicalChar) {
+    charChoices = charSetUpperLetters.concat(charSetSpecialChar, charNumbers)
+  }
+  else if (confirmedLower && numbers && specialChar) {
+    charChoices = charSetLowerLetters.concat(charNumbers, charSetSpecialChar)
+  }
+  else if (confirmedUpper && numbers) {
+    charChoices = charSetUpperLetters.concat(numbers)
+  }
+  else if (confirmedUpper && specialChar) {
+    charChoices = charSetUpperLetters.concat(charSetSpecialChar)
+  }
+  else if (confirmedLower && numbers) {
+    charChoices = charSetLowerLetters.concat(charNumbers)
+  }
+  else if (confirmedUpper && confirmedLower) {
+    charChoices = charSetLowerLetters.concat(charSetUpperLetters)
+  }
+  else if (specialChar && numbers) {
+    charChoices = charSetSpecialChar.concat(charNumbers)
+  }
+  else if (confirmedUpper) {
+    charChoices = charSetUpperLetters
+  }
+  else if (confirmedLower) {
+    charChoices = charSetLowerLetters
+  }
+  else if (numbers) {
+    charChoices = charNumbers
+  }
+  else if (specialChar) {
+    charChoices = charSetSpecialChar
+  }
+  else {
+    alert("Please pick at least one choice!")
+    return "Try again!"
+  }
+
+
+
+
 
   for (var i = 0; i < characters; i++) {
     var passwordGen = charChoices[Math.floor( Math.random() * charChoices.length)];

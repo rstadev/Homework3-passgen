@@ -4,8 +4,11 @@ This was a project issued by the Ga Tech Coding Bootcamp. The aim of this projec
 
 Technologies Used: HTML, CSS, Javascript, and Bootstrap.
 
+Project can be found at https://rstadev.github.io/Homework3-passgen/.
+
 ![demoImg](https://raw.githubusercontent.com/rstadev/Homework3-passgen/main/Assets/image.JPG)
 
-![demoGif](https://github.com/rstadev/Homework3-passgen/blob/main/Assets/PassGenDemo.gif)
 
-Project can be found at https://rstadev.github.io/Homework3-passgen/.
+Demo
+
+![demoGif](https://github.com/rstadev/Homework3-passgen/blob/main/Assets/PassGenDemo.gif)
